@@ -1,0 +1,120 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Spartan'
+}
+.hide {
+    visibility: hidden;
+}
+
+.user-selection {
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.user-selection button {
+    background-color: #4d4d4d;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 20px;
+    color: #ededed;
+    cursor: pointer;
+    transition: all .3s;
+}
+.user-selection button:hover {
+    color: #4d4d4d;
+    background: #ededed;
+}
+
+
+.container {
+    border: 2px solid #4d4d4d;
+    box-sizing: border-box;
+    width: 700px;
+    margin: 0px auto;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    height: 70px;
+    background-color: #4D4D3D;
+}
+header img {
+    width: 50px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ededed;
+    border-radius: 50%;
+}
+header p {
+    color: #ededed;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.chat-body {
+    height: 100vh;
+    position: relative;
+    height: calc(100vh - 80px);
+}
+.chat-messages {
+    padding: 0px 5px;
+    height: 560px;
+    overflow-y: scroll;
+    display: block;
+}
+.chat-messages p {
+    width: 90%;
+    padding: 7px;
+    border-radius: 3px;
+}
+p.user-one-msg {
+    background-color: #727272;
+    color: #ededed;
+}
+p.user-two-msg {
+    background-color: #ededed;
+    color: #727272;
+}
+
+.chat-input-box {
+    position: absolute;
+    bottom: 0px;
+    left: 5px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.chat-input-box input {
+    font-family: 'Spartan';
+    font-size: 16px;
+    padding-left: 5px;
+    width: 500px;
+    height: 40px;
+    border-radius: 3px;
+    outline: none;
+    border: thin solid #4d4d4d;
+}
+.chat-input-box button {
+    background-color: #4d4d4d;
+    border: none;
+    color: #ededed;
+    padding: 7px 20px;
+    margin-left: 10px;
+    border-radius: 2px;
+    font-size: 16px;
+    cursor: pointer;
+}
