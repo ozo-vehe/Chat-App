@@ -64,14 +64,19 @@ send.addEventListener('click', function() {
             db.collection("User Two")
                 .onSnapshot((doc) => {
                     doc.forEach((d) => {
-                        console.log(d.data().message);
-                    })
-                    let outgoingMsg = document.createElement('p')
-                    outgoingMsg.classList.add('user-two-msg');
+                        if(d.data().message !== '' && d.data().message !== undefined) {
+                            messagesArray.push(d.data().message)
+                            let outgoingMsg = document.createElement('p')
+                            outgoingMsg.classList.add('user-two-msg');
         
-                    outgoingMsg.append(doc.data().message)
-                    chatMessages.append(outgoingMsg);
-                    inputBox.value = '';
+                            outgoingMsg.append(messagesArray.shift())
+                            chatMessages.append(outgoingMsg);
+                            inputBox.value = '';
+                        }
+                        else {
+                            console.log('empty');
+                        }
+                    })
                 });
         }
         else if(userSelected == 'User Two') {
