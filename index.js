@@ -133,8 +133,4 @@ loginBtn.forEach((btn) => {
             console.log(e)
         })
     })
-})        
-
-window.addEventListener("load", function() {
-    deleteMsgStore(userName.textContent)
 })
